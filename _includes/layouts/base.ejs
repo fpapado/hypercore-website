@@ -64,8 +64,8 @@ function footerLink (url, label) {
       </div>
     </header>
     <header class="mobile">
-      <a href="<%= rootPath %>" title="Home"><img class="logo" src="<%= rootPath %>images/hypercore-protocol.png"></a>
-      <a id="mobile-menu-btn" href="#" title="Nav"><img class="menu" src="<%= rootPath %>images/icons8/menu-26.png"></a>
+      <a href="<%= rootPath %>"><img alt="Hypercore, Home" class="logo" src="<%= rootPath %>images/hypercore-protocol.png"></a>
+      <button id="mobile-menu-btn" aria-expanded="false"><img alt="Menu" class="menu" src="<%= rootPath %>images/icons8/menu-26.png"></button>
     </header>
     <div id="mobile-menu">
       <%- navItem('', 'Home') %>
