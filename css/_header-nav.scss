@@ -33,7 +33,9 @@ header.desktop {
       text-decoration: underline;
     }
 
-    &.current {
+    /* Links marked as current (either page or location) */
+    &[aria-current="page"], 
+    &[aria-current="location"] {
       border-bottom: 2px solid;
     }
   }

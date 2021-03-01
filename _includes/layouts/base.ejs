@@ -7,9 +7,8 @@ wideLayout: false
 <%
 function navItem (url, label, addedCls = '') {
   let realUrl = `/${url}`
-  let cls = page.url === realUrl || page.url.startsWith(realUrl) ? 'current' : ''
-  if (addedCls) cls += ` ${addedCls}`
-  return `<a class="${cls}" href="${rootPath}${url}">${label}</a>`
+  let ariaCurrent = page.url === realUrl ? 'page' : page.url.startsWith(realUrl) ? 'location' : 'false'
+  return `<a class="${addedCls}" href="${rootPath}${url}" aria-current="${ariaCurrent}">${label}</a>`
 }
 function footerLink (url, label) {
   return `<div><a href="${url}">${label}</a></div>`
