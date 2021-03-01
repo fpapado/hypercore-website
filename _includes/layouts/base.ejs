@@ -9,10 +9,10 @@ function navItem (url, label, addedCls = '') {
   let realUrl = `/${url}`
   let cls = page.url === realUrl || page.url.startsWith(realUrl) ? 'current' : ''
   if (addedCls) cls += ` ${addedCls}`
-  return `<a class="${cls}" href="${rootPath}${url}" title="${label}">${label}</a>`
+  return `<a class="${cls}" href="${rootPath}${url}">${label}</a>`
 }
 function footerLink (url, label) {
-  return `<div><a href="${url}" title="${label}">${label}</a></div>`
+  return `<div><a href="${url}">${label}</a></div>`
 }
 %>
 
@@ -51,16 +51,16 @@ function footerLink (url, label) {
   <body class="<%= wideLayout ? 'wide' : 'narrow' %>">
     <header class="desktop">
       <div class="nav-left">
-        <a href="<%= rootPath %>" title="Home"><img class="logo" src="<%= rootPath %>images/hypercore-protocol.png"></a>
+        <a href="<%= rootPath %>"><img class="logo" src="<%= rootPath %>images/hypercore-protocol.png"></a>
         <%- navItem('guides', 'Guides') %>
         <%- navItem('protocol', 'Protocol') %>
         <%- navItem('install', 'Install') %>
         <%- navItem('awesome-hacks', 'Awesome Hacks') %>
       </div>
       <div class="nav-right">
-        <a href="https://chat.hypercore-protocol.org" title="Hypercore Discord Server"><img class="icon" src="<%= rootPath %>images/discord-icon.png"></a>
-        <a href="https://twitter.com/hypercoreproto" title="Hypercore Twitter"><img class="icon" src="<%= rootPath %>images/twitter-icon.png"></a>
-        <a href="https://github.com/hypercore-protocol" title="Hypercore GitHub Org"><img class="icon" src="<%= rootPath %>images/github-icon.png"></a>
+        <a href="https://chat.hypercore-protocol.org"><img alt="Hypercore Discord Server" class="icon" src="<%= rootPath %>images/discord-icon.png"></a>
+        <a href="https://twitter.com/hypercoreproto"><img alt="Hypercore Twitter" class="icon" src="<%= rootPath %>images/twitter-icon.png"></a>
+        <a href="https://github.com/hypercore-protocol"><img alt="Hypercore GitHub Org" class="icon" src="<%= rootPath %>images/github-icon.png"></a>
       </div>
     </header>
     <header class="mobile">
@@ -80,9 +80,9 @@ function footerLink (url, label) {
     <footer>
       <div class="patreon-cta">
         <div class="patreon-cta-inner">
-          <img src="<%= rootPath %>images/icons8/heart-24-inverted.png">
+          <img alt="Heart" src="<%= rootPath %>images/icons8/heart-24-inverted.png">
           Hypercore Protocol is open-source!
-          <a href="https://www.patreon.com/paul_maf_and_andrew" title="Patreon" target="_blank">Support us on Patreon</a>.
+          <a href="https://www.patreon.com/paul_maf_and_andrew" target="_blank">Support us on Patreon</a>.
         </div>
       </div>
       <div class="footer-inner">
@@ -112,7 +112,7 @@ function footerLink (url, label) {
           </div>
         </div>
         <div class="copyrights">
-          Icons by <a href="https://icons8.com" title="Icons8">Icons8</a>
+          Icons by <a href="https://icons8.com">Icons8</a>
         </div>
       </div>
     </footer>
